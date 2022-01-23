@@ -19,3 +19,9 @@ Example:
 	h := tree.Height()
 	fmt.Println(h)
 ```
+
+Run fuzzy testing with
+```
+	alias go=go1.18beta1
+	go test -fuzztime=1m -fuzz ./...
+```
