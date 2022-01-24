@@ -20,6 +20,17 @@ Example:
 	fmt.Println(h)
 ```
 
+`TreeCmp` uses approach with comparing function to allow use struct and primitives as generic parameters.
+
+Example:
+``` go
+	tree := &rbt.TreeCmp[int]{
+		Cmp: func(a, b int) int {
+			return a-b
+		}
+	}
+```
+
 Run fuzzy testing with
 ```
 	alias go=go1.18beta1
